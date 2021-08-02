@@ -12,11 +12,6 @@ enum static_rarity {
   LEGENDARY = 4,
 }
 
-class Item
-{
-    name : string;
-    rarity : static_rarity;
-    type : item_type;
 
     constructor(TheName: string, ItemRarity: static_rarity, ItemType: item_type) 
     {
