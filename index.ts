@@ -81,8 +81,26 @@ function Dialog(){
           rl.question('Choose pack rarity:\n1. UNCOMMON\n2. RARE\n3. LEGENDARY\n', (answer) => {
             switch (answer) {
               case '1':
-                packRarity = static_rarity.UNCOMMON  
-                Pack_open(packType, packRarity)
+                packRarity = staticRarity.UNCOMMON;
+                console.log("Enter amount of packs (no more than 24 packs of one rarity in total)")
+                console.log("Current amount of opened " + staticRarity[packRarity] + "packs is "+counterFairPackUNCOMMON)
+                rl.on('line', (input) => {
+                  const parsed = parseInt(input, 10);
+                  console.log(`Received: ${parsed}`);
+                  if(parsed+counterFairPackUNCOMMON <= 24){
+                    amount = parsed;
+                    counterFairPackUNCOMMON += amount;
+                    console.clear();  
+                    openFairPack(amount,packRarity);  
+                    
+                    
+
+                  }
+                  else{
+                    rl.setPrompt("Inappropriate number of packs. Please try again\n");
+                    rl.prompt();
+                  }
+                });               
                 break;
               case '2':
                 packRarity = static_rarity.RARE  
