@@ -25,8 +25,6 @@ let packType: string;
 let packRarity: static_rarity;
 
 //#region user dialog
-//let rlmain,rlrarity = readline.createInterface({
-
 function Dialog(){
   let rl = readline.createInterface({
     input: process.stdin,
