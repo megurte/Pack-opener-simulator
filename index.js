@@ -16,6 +16,7 @@ var staticRarity;
     staticRarity[staticRarity["RARE"] = 3] = "RARE";
     staticRarity[staticRarity["LEGENDARY"] = 4] = "LEGENDARY";
 })(staticRarity || (staticRarity = {}));
+//fair packs counters
 var counters = {
     "UNCOMMON": 0,
     "RARE": 0,
@@ -37,10 +38,10 @@ function Dialog() {
         input: process.stdin,
         output: process.stdout
     });
-    rl.question('Choose one of the following options and press key:\n1. Open standart item pack\n2. Open consistent item pack\n3. Open fair item pack\n4. Open your inventory\n', function (answer) {
+    rl.question('Choose one of the following options and press key:\n1. Open standard item pack\n2. Open consistent item pack\n3. Open fair item pack\n4. Open your inventory\n', function (answer) {
         switch (answer) {
             case '1':
-                packType = "standart_pack";
+                packType = "standard_pack";
                 rl.question('Choose pack rarity:\n1. UNCOMMON\n2. RARE\n3. LEGENDARY\n', function (answer) {
                     switch (answer) {
                         case '1':
@@ -211,9 +212,9 @@ var itemlist = [newitem1, newitem2, newitem3, newitem4, newitem5, newitem6, newi
 var inventory = [];
 function openPack(packRarity) {
     var packitemlist = [];
-    //standart_pack
-    if (packType == "standart_pack") {
-        console.log("\nOpening standart " + staticRarity[packRarity].toLowerCase() + " pack...\n");
+    //standard_pack
+    if (packType == "standard_pack") {
+        console.log("\nOpening standard " + staticRarity[packRarity].toLowerCase() + " pack...\n");
         //slot ratiry (pattern)
         var tempraritylist = [packRarity, packRarity, packRarity - 1, packRarity - 1, packRarity - 1];
         //determining the final rarity of items

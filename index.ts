@@ -45,10 +45,10 @@ function Dialog(){
     output: process.stdout
   });
 
-    rl.question('Choose one of the following options and press key:\n1. Open standart item pack\n2. Open consistent item pack\n3. Open fair item pack\n4. Open your inventory\n', (answer) => {
+    rl.question('Choose one of the following options and press key:\n1. Open standard item pack\n2. Open consistent item pack\n3. Open fair item pack\n4. Open your inventory\n', (answer) => {
       switch (answer) {
         case '1':
-          packType = "standart_pack";
+          packType = "standard_pack";
           rl.question('Choose pack rarity:\n1. UNCOMMON\n2. RARE\n3. LEGENDARY\n', (answer) => {
             switch (answer) {
               case '1':
@@ -183,12 +183,6 @@ function Dialog(){
 //program start
 Dialog();
 
-
-
-
-
-
-
 //#region item data
 let newitem1 = new Item("King's cavalary shield",staticRarity.RARE,staticItemType.SHIELD);
 let newitem2 = new Item("Iceborn shield",staticRarity.RARE,staticItemType.SHIELD);
@@ -233,9 +227,9 @@ let inventory: Item[] = [];
 function openPack(packRarity: staticRarity) {
   
   let packitemlist: Item[] = [];
-  //standart_pack
-  if (packType == "standart_pack") {
-    console.log("\nOpening standart " + staticRarity[packRarity].toLowerCase() + " pack...\n")
+  //standard_pack
+  if (packType == "standard_pack") {
+    console.log("\nOpening standard " + staticRarity[packRarity].toLowerCase() + " pack...\n")
     //slot ratiry (pattern)
     let tempraritylist: staticRarity[] = [packRarity, packRarity, packRarity-1,packRarity-1,packRarity-1];
     
@@ -287,7 +281,7 @@ function openFairPack(amout: number, packRarity: staticRarity){
     counters[staticRarity[packRarity]]++;
     console.log(counters[staticRarity[packRarity]]);
     //slot ratiry (pattern)
-    let tempraritylist: staticRarity[] = [packRarity, packRarity, packRarity-1,packRarity-1,packRarity-1];
+    let tempraritylist: staticRarity[] = [packRarity, packRarity, packRarity-1, packRarity-1, packRarity-1];
     
     //determining the final rarity of items
     slotRarityDet(tempraritylist);
