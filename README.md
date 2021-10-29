@@ -1,10 +1,10 @@
 # Pack opener simulator <h1> 
-### Подготовлено по тестовому заданию <h2> 
+### Prepared by test task <h2> 
 
-Работа со скриптом реализована через консоль.
-Для запуска необходимо в директории открыть index.js файл с помощью команды:
+Working with the script is implemented through the console.
+To start you need to open the index.js file in the directory using the command:
 
 `node index.js` 
 
-Весь исходный код находится в файле index.ts
+All code is in index.ts file
 
