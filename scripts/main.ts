@@ -1,4 +1,3 @@
-///<reference path="items.ts"/>
 import {randomInt} from 'crypto';
 import * as readline from 'readline';
 

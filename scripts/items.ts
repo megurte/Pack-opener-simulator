@@ -193,4 +193,4 @@ const items = {
     }),
 };
 
-let itemsList = Utils.CreateMap(items, "Items");
+let itemsList = Utils.CreateMap(items);
