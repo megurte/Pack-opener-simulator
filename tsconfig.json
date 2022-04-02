@@ -2,8 +2,19 @@
     "compilerOptions": {
         "target": "esnext",
         "watch": true,
-        "module": "commonjs", 
+        "removeComments": true,
+        "strict": true,
+        "outFile": "/index.js",
+        "module": "system",
         "lib": ["dom", "es2017"]
-    }
-
+    },
+    "files": [
+        "scripts/constants.ts",
+        "scripts/item-model.ts",
+        "scripts/items.ts",
+        "scripts/utils.ts",
+        "node_modules/@types/node/crypto.d.ts",
+        "node_modules/@types/node/readline.d.ts",
+        "scripts/main.ts"
+    ]
 }

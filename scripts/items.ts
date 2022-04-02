@@ -1,3 +1,4 @@
+///<reference path="utils.ts"/>
 const items = {
     Kings_cavalary_shield: new Item({
         ID: 1,

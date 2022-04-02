@@ -3,9 +3,10 @@ class Utils {
         let result: Item[] = [];
 
         for (let i = 0; i < map.length; i++) {
-            result.push(items[i]);
+            result.push(map[i]);
         }
 
         return result;
     }
+
 }
