@@ -2,11 +2,12 @@ class Utils {
     public static CreateMap(map: any): Item[] {
         let result: Item[] = [];
 
-        for (let i = 0; i < map.length; i++) {
-            result.push(map[i]);
+        for (let item in map) {
+            if (map.hasOwnProperty(item)) {
+                result.push(map[item]);
+            }
         }
 
         return result;
     }
-
 }
